@@ -22,6 +22,9 @@ namespace M_WcfService_Student_Teamservice_Azure
         IList<Guest> GetGuestsByName(string name);
 
         [OperationContract]
+        IList<Guest> GetGuestByAddress(string address);
+
+        [OperationContract]
         int AddGuest(string name, string address);
     }
 

@@ -114,6 +114,29 @@ namespace M_WcfService_Student_Teamservice_Azure
             }
         }
 
+        public IList<Guest> GetGuestByAddress(string address)
+        {
+            string selectStr = "select * from guest where address LIKE @address";
+            using (SqlConnection databaseConnection = new SqlConnection(ConnectionString))
+            {
+                databaseConnection.Open();
+                using (SqlCommand selectCommand = new SqlCommand(selectStr, databaseConnection))
+                {
+                    selectCommand.Parameters.AddWithValue("@address", "%" + address + "%");
+                    using (SqlDataReader reader = selectCommand.ExecuteReader())
+                    {
+                        IList<Guest> guestList = new List<Guest>();
+                        while (reader.Read())
+                        {
+                            Guest gl = ReadGuest(reader);
+                            guestList.Add(gl);
+                        }
+                        return guestList;
+                    }
+                }
+            }
+        }
+
         public int AddGuest(string name, string address)
         {
             const string insertGuest = "insert into guest (Name, Address) values (@name, @address)";
