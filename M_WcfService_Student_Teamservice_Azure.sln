@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_WcfService_Student_Teamservice_Azure", "M_WcfService_Student_Teamservice_Azure\M_WcfService_Student_Teamservice_Azure.csproj", "{7BB7CD54-4694-491E-B3E7-B43A58163FA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M_WcfService_Student_Teamservice_AzureTestsForGuest", "M_WcfService_Student_Teamservice_AzureTestsForGuest\M_WcfService_Student_Teamservice_AzureTestsForGuest.csproj", "{4665F491-D35D-4FB2-A4C6-6ABC92D17C70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7BB7CD54-4694-491E-B3E7-B43A58163FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB7CD54-4694-491E-B3E7-B43A58163FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB7CD54-4694-491E-B3E7-B43A58163FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4665F491-D35D-4FB2-A4C6-6ABC92D17C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4665F491-D35D-4FB2-A4C6-6ABC92D17C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4665F491-D35D-4FB2-A4C6-6ABC92D17C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4665F491-D35D-4FB2-A4C6-6ABC92D17C70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

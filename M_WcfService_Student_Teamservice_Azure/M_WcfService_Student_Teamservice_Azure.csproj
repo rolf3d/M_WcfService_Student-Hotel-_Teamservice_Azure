@@ -62,9 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ServiceStudent.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FejliAddGuest.cs" />
+    <Compile Include="FejlIAdresse.cs" />
     <Compile Include="ServiceStudent.svc.cs">
       <DependentUpon>ServiceStudent.svc</DependentUpon>
     </Compile>

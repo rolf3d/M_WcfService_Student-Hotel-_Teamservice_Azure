@@ -22,7 +22,7 @@ namespace M_WcfService_Student_Teamservice_Azure
         IList<Guest> GetGuestsByName(string name);
 
         [OperationContract]
-        int AddGuest(string name,string address);
+        int AddGuest(string name, string address);
     }
 
     [DataContract]
@@ -42,7 +42,15 @@ namespace M_WcfService_Student_Teamservice_Azure
         public string Name
         {
             get { return name; }
-            set { name = value; }
+            set
+            {
+                name = value;
+                if (name == "")
+                {
+                    throw new FejliAddGuest("Fejl i navn til gæest " + name);
+                }
+
+            }
         }
         [DataMember]
         private string address;
@@ -50,17 +58,31 @@ namespace M_WcfService_Student_Teamservice_Azure
         public string Address
         {
             get { return address; }
-            set { address = value; }
+            set
+            {
+                address = value;
+                if (address == "")
+                {
+                    throw new FejlIAdresse("Fejl i adresse feltet " + address);
+                }
+            }
         }
 
         public Guest()
         {
-            
+
+        }
+
+        public Guest(int guest_no, string name, string address)
+        {
+            this.Guest_No = guest_no;
+            this.Name = name;
+            this.Address = address;
         }
 
 
     }
 
 
-    
+
 }

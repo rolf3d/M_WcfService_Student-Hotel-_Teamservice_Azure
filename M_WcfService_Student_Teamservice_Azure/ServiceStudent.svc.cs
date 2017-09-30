@@ -31,7 +31,7 @@ namespace M_WcfService_Student_Teamservice_Azure
         {
             const string selectAllStudents = "select * from Guest";
 
-            
+
 
             using (SqlConnection databaseConnection = new SqlConnection(ConnectionString))
             {
@@ -120,12 +120,14 @@ namespace M_WcfService_Student_Teamservice_Azure
             using (SqlConnection databaseConnection = new SqlConnection(ConnectionString))
             {
                 databaseConnection.Open();
+
                 using (SqlCommand insertCommand = new SqlCommand(insertGuest, databaseConnection))
                 {
                     insertCommand.Parameters.AddWithValue("@name", name);
                     insertCommand.Parameters.AddWithValue("@address", address);
                     int rowsAffected = insertCommand.ExecuteNonQuery();
                     return rowsAffected;
+
                 }
             }
         }
